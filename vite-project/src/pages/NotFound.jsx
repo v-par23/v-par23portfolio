@@ -1,3 +1,3 @@
 export const NotFound = () => {
-    return <div> Page is not found!   </div>;
+    return <div> Error 404: Page Not Found. Please Refresh your page. </div>;
 };
