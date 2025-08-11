@@ -17,9 +17,8 @@ export const HeroSection = () => {
                                 Parikh
                             </span>
                         </h1>
-                        <p className = "text-xl md:text-xl text-muted-foreground/80 max-w-full lg:whitespace-nowrap opacity-0 animate-fade-in-delay-3" >
-                            software engineer, open-source contributor, and sport enthusiast | Systems Design Engineering at UWaterloo. 
-                            {/* problem solver fueled by code, open-source, and sport | Systems Design Engineering at UWaterloo.*/} 
+                        <p className = "text-xl md:text-xl text-foreground/80 max-w-full lg:whitespace-nowrap opacity-0 animate-fade-in-delay-3" >
+                            software engineer, open-source contributor, and sport enthusiast | Systems Design Engineering at UWaterloo.
                         </p>
 
                         <div className = "pt-4 opacity-0 animate-fade-in-delay-4">
