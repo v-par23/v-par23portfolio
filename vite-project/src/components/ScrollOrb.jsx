@@ -14,7 +14,7 @@ export const ScrollOrb = () => {
             // Calculate Y position based on current scroll
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
-            const orbY = scrollY + (windowHeight * 0.3);
+            const orbY = scrollY + (windowHeight * 0.2);
             
             setOrbPosition({ x: orbX, y: orbY });
         };
@@ -53,10 +53,11 @@ export const ScrollOrb = () => {
             <div 
                 className="scroll-orb"
                 style={{
-                    right: '10%',
+                    right: '1%',
                     top: `${orbPosition.y}px`,
                     opacity: isVisible ? 1 : 0,
-                    transform: `translateY(-50%) scale(${isVisible ? 1 : 0.5})`
+                    transform: `translateY(-50%) scale(${isVisible ? 1 : 0.8})`,
+                    transition: 'opacity 0.3s ease, transform 0.3s ease'
                 }}
             />
         </>

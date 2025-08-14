@@ -99,7 +99,7 @@ export const About = () => {
                 {/* Social Icons */}
                 <div className="flex justify-center gap-4">
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/v-par23" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-background/60 border border-primary/20 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group"
@@ -110,7 +110,7 @@ export const About = () => {
                   </a>
                   
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://www.linkedin.com/in/vedant-parikh-4418981a4/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-background/60 border border-primary/20 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group"
@@ -121,7 +121,7 @@ export const About = () => {
                   </a>
                   
                   <a 
-                    href="mailto:your.email@example.com" 
+                    href="mailto:vsparikh@uwaterloo.ca" 
                     className="w-12 h-12 rounded-full bg-background/60 border border-primary/20 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group"
                   >
                     <svg className="w-6 h-6 text-foreground group-hover:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

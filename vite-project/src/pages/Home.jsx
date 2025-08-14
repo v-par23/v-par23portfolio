@@ -54,7 +54,7 @@ export const Home = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="min-h-screen flex items-center justify-center border-b border-gray-800">
+        <section id="contact" className="min-h-screen flex items-center justify-center border-b border-gray-800">
             <div className="text-center max-w-4xl mx-auto px-4">
                 <h2 className="text-4xl font-bold text-white mb-6 shimmer-text">
                     Contact
