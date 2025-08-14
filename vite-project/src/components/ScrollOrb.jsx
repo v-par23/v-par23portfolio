@@ -9,7 +9,7 @@ export const ScrollOrb = () => {
 
         const updateOrbPosition = () => {
             // Always position orb on the right side
-            const orbX = window.innerWidth * 0.95;
+            const orbX = window.innerWidth * 0.96;
             
             // Calculate Y position based on current scroll
             const scrollY = window.scrollY;
