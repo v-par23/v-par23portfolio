@@ -25,7 +25,7 @@ export const ScrollOrb = () => {
             
             // Orb follows scroll with a slight delay and offset
             const orbY = Math.min(scrollY + windowHeight * 0.3, documentHeight - windowHeight);
-            const orbX = window.innerWidth * 0.1; // Keep orb on the left side
+            const orbX = window.innerWidth * 0.9; // Keep orb on the right side
             
             setOrbPosition({ x: orbX, y: orbY });
         };
