@@ -63,7 +63,7 @@ export const About = () => {
                 <div className="relative mx-auto">
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_30px_rgba(120,219,255,0.3)]">
                     <img 
-                      src="/path-to-your-profile-image.jpg" 
+                      src="/profile.jpeg" 
                       alt="Vedant Parikh" 
                       className="w-full h-full object-cover"
                     />
