@@ -7,6 +7,18 @@ export const ScrollOrb = () => {
     useEffect(() => {
         let timeoutId;
 
+        const updateOrbPosition = () => {
+            // Always position orb on the right side
+            const orbX = window.innerWidth * 0.9;
+            
+            // Calculate Y position based on current scroll
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const orbY = scrollY + (windowHeight * 0.3);
+            
+            setOrbPosition({ x: orbX, y: orbY });
+        };
+
         const handleScroll = () => {
             setIsVisible(true);
             
@@ -18,24 +30,19 @@ export const ScrollOrb = () => {
                 setIsVisible(false);
             }, 1000);
 
-            // Calculate orb position based on scroll
-            const scrollY = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            
-            // Orb follows scroll with a slight delay and offset
-            const orbY = Math.min(scrollY + windowHeight * 0.3, documentHeight - windowHeight);
-            const orbX = window.innerWidth * 0.9; // Keep orb on the right side
-            
-            setOrbPosition({ x: orbX, y: orbY });
+            // Update orb position
+            updateOrbPosition();
         };
 
-        // Add event listeners
+        // Set initial position and add event listeners
+        updateOrbPosition();
         window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', updateOrbPosition);
 
         // Cleanup
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', updateOrbPosition);
             if (timeoutId) clearTimeout(timeoutId);
         };
     }, []);
@@ -46,10 +53,10 @@ export const ScrollOrb = () => {
             <div 
                 className="scroll-orb"
                 style={{
-                    left: `${orbPosition.x}px`,
+                    right: '10%',
                     top: `${orbPosition.y}px`,
                     opacity: isVisible ? 1 : 0,
-                    transform: `translate(-50%, -50%) scale(${isVisible ? 1 : 0.5})`
+                    transform: `translateY(-50%) scale(${isVisible ? 1 : 0.5})`
                 }}
             />
         </>
