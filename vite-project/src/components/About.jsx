@@ -22,10 +22,10 @@ export const About = () => {
                     I'm a Systems Design Engineering student at the University of Waterloo, with a growing interest in exploring the intersection of technology and innovation.
                   </p>
                   <p className="text-lg">
-                    My passion for coding began at age 12, and it's been an incredible ride of building, breaking, and rebuilding ever since. I love turning complex problems into elegant solutions.
+                    I’m a highly ambitious software developer with a unique background that has shaped my software engineering journey. I thrive on clear communication, tackling problems with an analytical mindset, and bringing the technical skills needed to take on any challenge.
                   </p>
                   <p className="text-lg">
-                    When I'm not coding, I enjoy movies and TV shows - the storytelling and visuals often inspire my design approach. (Watch Breaking Bad if you haven't!)
+                    When I’m not coding, I enjoy staying active through table tennis or practicing calligraphy. I’m also a big fan of watching sports and love exploring new places whenever I get the chance.
                   </p>
                 </div>
                 
