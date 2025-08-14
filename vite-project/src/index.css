@@ -19,6 +19,9 @@
   --animate-nebula-float: nebula-float 20s ease-in-out infinite;
   --animate-cosmic-drift: cosmic-drift 15s ease-in-out infinite;
   --animate-dust-swirl: dust-swirl 25s linear infinite;
+  --animate-orb-float: orb-float 8s ease-in-out infinite;
+  --animate-cosmic-pulse: cosmic-pulse 3s ease-in-out infinite;
+  --animate-text-shimmer: text-shimmer 4s linear infinite;
 }
 
 @keyframes float {
@@ -101,6 +104,37 @@
   }
 }
 
+@keyframes orb-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes cosmic-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(120, 219, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(120, 219, 255, 0.6);
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 @layer base {
   :root{
     --background: 222 47% 4%;
@@ -163,6 +197,86 @@
     animation: dust-swirl 25s linear infinite;
     pointer-events: none;
     z-index: -1;
+  }
+
+  /* Scroll-triggered dark orb */
+  .scroll-orb {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.9) 70%, rgba(120,219,255,0.3) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    mix-blend-mode: multiply;
+    animation: orb-float 8s ease-in-out infinite;
+    transition: all 0.3s ease;
+    box-shadow: 
+      0 0 30px rgba(0,0,0,0.5),
+      inset 0 0 20px rgba(120,219,255,0.2);
+  }
+
+  /* Cosmic cursor effect */
+  .cosmic-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(120,219,255,0.8) 0%, rgba(120,219,255,0.2) 70%, transparent 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+    animation: cosmic-pulse 3s ease-in-out infinite;
+    transition: all 0.1s ease;
+  }
+
+  /* Shimmer text effect */
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(120, 219, 255, 0.8) 25%,
+      rgba(120, 219, 255, 1) 50%,
+      rgba(120, 219, 255, 0.8) 75%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: text-shimmer 4s linear infinite;
+  }
+
+  /* Cosmic card hover effect */
+  .cosmic-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .cosmic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(120, 219, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  .cosmic-card:hover::before {
+    left: 100%;
+  }
+
+  .cosmic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(120, 219, 255, 0.3);
   }
 }
 
