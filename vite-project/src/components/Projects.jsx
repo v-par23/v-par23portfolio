@@ -4,73 +4,69 @@ export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
-    {
-      id: 1,
-      title: "Protivity",
-      description: "Decodes complex ingredient labels - Best AI Safety + Responsible hack at UofT",
-      award: "Winner @ Clockhacks2",
-      image: "/path-to-labellens-screenshot.jpg",
+          {
+        id: 1,
+        title: "Protivity",
+        description: "Boosts productivity and task management with a full-stack MERN app",
+        award: "Winner @ Clockhacks2",
+        image: "/SCR-20250815-mmwl.png",
       technologies: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB"],
       details: {
-        overview: "LabelLens is an AI-powered application that analyzes ingredient labels on products to provide safety assessments and detailed information about chemical components.",
+        overview: "Protivity is a full-stack productivity platform that helps users organize tasks, track progress, and visualize analytics for efficient task management.",
         features: [
-          "AI-powered ingredient analysis using Google Gemini",
-          "Real-time safety assessment with color-coded risk levels",
-          "Comprehensive ingredient database with detailed information",
-          "Responsive web interface for mobile and desktop use"
-        ],
-        impact: "Won Best AI Safety + Responsible hack at UofT's GenAI Genesis 2025 hackathon, demonstrating innovation in consumer safety and AI ethics."
+          "Task creation, categorization, and multiple view modes",
+          "Visual analytics dashboards for productivity insights",
+          "Responsive ReactJS interface with intuitive UX",
+          "NodeJS/ExpressJS backend with MongoDB for scalable performance"
+        ]
       }
     },
     {
       id: 2,
       title: "Visualizicar",
-      description: "Predicts funding success and trends - 2nd place in runQL's category at canada's largest data hackathon by UWaterloo",
-      image: "/path-to-investment-screenshot.jpg",
+      description: "Interactive 3D car configurator with optimized rendering and comparisons",
+              image: "/car.png",
       technologies: ["Processing", "Java"],
       details: {
-        overview: "A comprehensive investment analysis platform that predicts funding success and identifies investment trends using machine learning and data visualization.",
+        overview: "Visualizicar is a 3D car configurator built in Processing/Java that allows users to explore car models interactively, view specifications, and compare designs.",
         features: [
-          "Machine learning models for funding success prediction",
-          "Interactive data visualizations with Plotly and Dash",
-          "Geographic analysis of investment trends by location",
-          "Sector-based investment insights and analytics"
-        ],
-        impact: "Achieved 2nd place in runQL's category at Canada's largest data hackathon by UWaterloo, showcasing advanced data science and business intelligence capabilities."
+          "Interactive 3D model selection, rotation, and zoom",
+          "STL file parsing and matrix transformations for accurate rendering",
+          "Optimized rendering with backface culling and triangle sorting",
+          "Info popups and comparison tools for detailed car insights"
+        ]
       }
     },
-    {
-      id: 3,
-      title: "Sentilytics",
-      description: "Detects and rewrites bias in emails - winner at WiE Hackathon 2024 by UWaterloo",
-      image: "/path-to-bias-screenshot.jpg",
+          {
+        id: 3,
+        title: "Sentilytics",
+        description: "Analyzes product reviews with Python for sentiment and trends",
+        image: "/review.png",
       technologies: ["Python", "Streamlit", "Hugging Face Transformers"],
       details: {
-        overview: "An AI-powered tool that detects and helps rewrite biased language in emails, promoting inclusive and professional communication.",
+        overview: "Sentilytics is a Python-based tool that performs sentiment analysis on product reviews, extracts insights, and visualizes trends to help users understand public opinion.",
         features: [
-          "AI-powered bias detection in written text",
-          "Real-time email analysis and suggestions",
-          "Bias-free rewriting recommendations",
-          "User-friendly web interface for easy access"
-        ],
-        impact: "Won the WiE Hackathon 2024 by UWaterloo, highlighting the importance of inclusive communication and AI for social good."
+          "Sentiment detection using NLP techniques",
+          "Trend identification and summarization of key review points",
+          "Interactive visualizations of ratings and sentiment distribution",
+          "Scalable processing for large review datasets"
+        ]
       }
     },
-    {
-      id: 4,
-      title: "TrueNorth",
-      description: "Real-time feedback on tone, clarity, and body language",
-      image: "/path-to-pitch-screenshot.jpg",
+          {
+        id: 4,
+        title: "TrueNorth",
+        description: "Modern, responsive website for a professional table tennis center",
+        image: "/SCR-20250815-mrpe.jpeg",
       technologies: ["ReactJS", "TailwindCSS", "Framer Motion"],
       details: {
-        overview: "A comprehensive presentation coaching platform that provides real-time feedback on tone, clarity, and body language during presentations.",
+        overview: "A client-ready ReactJS website built for TrueNorth Table Tennis, showcasing programs, events, and contact information with an intuitive, responsive design.",
         features: [
-          "Real-time video analysis using DeepFace",
-          "Speech transcription and analysis with Whisper",
-          "AI-powered feedback on presentation delivery",
-          "Comprehensive coaching insights and recommendations"
-        ],
-        impact: "Helps users improve their presentation skills through AI-powered analysis and personalized feedback, making public speaking more accessible and effective."
+          "Fully responsive interface for mobile and desktop",
+          "TailwindCSS styling for modern UI/UX",
+          "Interactive animations with Framer Motion",
+          "Deployment via Netlify for live public access"
+          ]
       }
     }
   ];
@@ -128,9 +124,20 @@ export const Projects = () => {
                     )}
                   </div>
                   
-                  {/* Project Image Placeholder */}
-                  <div className="w-full h-48 bg-background/40 rounded-lg mb-4 border border-primary/20 flex items-center justify-center">
-                    <span className="text-foreground/40 text-sm">Project Screenshot</span>
+                  {/* Project Image */}
+                  <div className="w-full h-48 rounded-lg mb-4 border border-primary/20 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="w-full h-full bg-background/40 flex items-center justify-center">
+                      <span className="text-foreground/40 text-sm">Project Screenshot</span>
+                    </div>
                   </div>
                   
                   {/* Description */}
@@ -185,9 +192,20 @@ export const Projects = () => {
               </p>
             </div>
             
-            {/* Project Image Placeholder */}
-            <div className="w-full h-64 bg-background/40 rounded-lg mb-8 border border-primary/20 flex items-center justify-center">
-              <span className="text-foreground/40 text-lg">Project Screenshot</span>
+            {/* Project Image */}
+            <div className="w-full h-64 rounded-lg mb-8 border border-primary/20 overflow-hidden">
+              <img 
+                src={selectedProject.image} 
+                alt={selectedProject.title}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="w-full h-full bg-background/40 flex items-center justify-center">
+                <span className="text-foreground/40 text-lg">Project Screenshot</span>
+              </div>
             </div>
             
             {/* Overview */}
@@ -213,13 +231,7 @@ export const Projects = () => {
               </div>
             </div>
             
-            {/* Impact */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-foreground mb-4">Impact & Recognition</h3>
-              <p className="text-foreground/90 leading-relaxed">
-                {selectedProject.details.impact}
-              </p>
-            </div>
+
             
             {/* Technologies */}
             <div className="mb-8">
