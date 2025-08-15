@@ -4,17 +4,26 @@ export const About = () => {
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center px-4 py-16">
       <div className="container max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 shimmer-text">
+            About Me
+          </h2>
+          <p className="text-foreground/80 text-lg max-w-2xl mx-auto whitespace-nowrap">
+            Get to know me better and learn about my journey
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
           {/* Left Panel - About Me Section */}
           <div className="lg:col-span-2">
             <div className="cosmic-card bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
               <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
-                    About Me
-                  </h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full mx-auto"></div>
+                
+                {/* Blue Border Line */}
+                <div className="flex justify-center">
+                  <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full"></div>
                 </div>
                 
                 <div className="space-y-4 text-foreground/90 leading-relaxed">
@@ -52,6 +61,12 @@ export const About = () => {
           <div className="lg:col-span-1">
             <div className="cosmic-card bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 text-center">
               <div className="space-y-6">
+                
+                {/* Blue Border Line */}
+                <div className="flex justify-center">
+                  <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full"></div>
+                </div>
+                
                 {/* Profile Picture */}
                 <div className="relative mx-auto">
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_30px_rgba(120,219,255,0.3)]">
@@ -118,7 +133,7 @@ export const About = () => {
                     className="w-12 h-12 rounded-full bg-background/60 border border-primary/20 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 group"
                   >
                     <svg className="w-6 h-6 text-foreground group-hover:text-primary transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </a>
                 </div>

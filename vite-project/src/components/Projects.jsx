@@ -85,7 +85,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="relative min-h-screen flex items-center justify-center px-4 py-16">
+    <section id="projects" className="relative min-h-screen flex items-center justify-center px-4 py-16 mb-16">
       <div className="container max-w-7xl mx-auto">
         
         {!selectedProject ? (
@@ -95,7 +95,7 @@ export const Projects = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 shimmer-text">
                 My Projects
               </h2>
-              <p className="text-foreground/80 text-lg max-w-2xl mx-auto whitespace-nowrap">
+              <p className="text-foreground/80 text-lg max-w-2xl mx-auto whitespace-nowrap mb-12">
                 Here are some of the projects I've built, each showcasing different skills and technologies
               </p>
             </div>
