@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Cosmic Background */
+body {
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 60%, rgba(120, 219, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 40%, rgba(255, 183, 77, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #0f0f23 0%, #1a1a3a 25%, #2d1b69 50%, #1a1a3a 75%, #0f0f23 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -151,21 +164,6 @@
 
   html  {
     @apply scroll-smooth;
-  }
-
-  body  {
-    @apply text-foreground transition-colors duration-300;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    background: 
-      radial-gradient(ellipse at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 40% 60%, rgba(120, 219, 255, 0.2) 0%, transparent 50%),
-      radial-gradient(ellipse at 60% 40%, rgba(255, 183, 77, 0.2) 0%, transparent 50%),
-      linear-gradient(135deg, #0f0f23 0%, #1a1a3a 25%, #2d1b69 50%, #1a1a3a 75%, #0f0f23 100%);
-    background-attachment: fixed;
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
   }
 
   body::before {
