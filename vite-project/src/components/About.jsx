@@ -11,10 +11,10 @@ export const About = () => {
             <div className="cosmic-card bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
                     About Me
                   </h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/60 rounded-full mx-auto"></div>
                 </div>
                 
                 <div className="space-y-4 text-foreground/90 leading-relaxed">
@@ -29,17 +29,10 @@ export const About = () => {
                   </p>
                 </div>
                 
-                {/* Tagline Box */}
-                <div className="bg-background/60 rounded-xl p-6 border border-primary/10">
-                  <p className="text-center text-lg font-medium text-foreground/90">
-                    Always learning, always building, always driven!
-                  </p>
-                </div>
-                
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <a 
-                    href="#experience" 
+                    href="#work" 
                     className="cosmic-button flex-1 text-center"
                   >
                     Check out my experience →
