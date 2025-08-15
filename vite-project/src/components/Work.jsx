@@ -64,9 +64,12 @@ export const Work = () => {
         {!selectedWork ? (
           // Overview View - Multiple Work Cards
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-12 shimmer-text">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-4 shimmer-text">
               My Work Experience
             </h2>
+            <p className="text-foreground/80 text-lg max-w-2xl mx-auto whitespace-nowrap mb-12">
+              My journey in the real-world, gaining hands-on experience and building impactful solutions
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {workExperiences.map((work) => (
