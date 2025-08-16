@@ -5,6 +5,7 @@ import {About} from "../components/About.jsx";
 import {Work} from "../components/Work.jsx";
 import {Projects} from "../components/Projects.jsx";
 import {Contact} from "../components/Contact.jsx";
+import {ScrollOrb} from "../components/ScrollOrb.jsx";
 
 export const Home = () => {
     return (
@@ -12,6 +13,9 @@ export const Home = () => {
 
         {/* Effects for Background */}
         <StarBackground />
+
+        {/* Scroll Orb */}
+        <ScrollOrb />
 
         {/* Navbar */}
         <Navbar />

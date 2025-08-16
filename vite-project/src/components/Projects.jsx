@@ -86,7 +86,7 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="relative min-h-screen flex items-center justify-center px-4 py-16 mb-16">
-      <div className="container max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         
         {!selectedProject ? (
           // Overview View - Project Grid
