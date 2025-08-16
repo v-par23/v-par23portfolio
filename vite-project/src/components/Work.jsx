@@ -7,7 +7,7 @@ export const Work = () => {
     {
       id: 1,
       company: "ESGTree",
-      period: "July-Present",
+      period: "July 2025-Present",
       overview: "Software Engineer Intern",
       details: {
         title: "Software Engineer Intern",

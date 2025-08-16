@@ -92,7 +92,7 @@ export const About = () => {
                 {/* Resume Link */}
                 <div>
                   <a 
-                    href="/path-to-your-resume.pdf" 
+                    href="/Vedant Parikh Resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300"
