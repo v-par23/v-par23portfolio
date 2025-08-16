@@ -12,7 +12,9 @@ export const Work = () => {
       details: {
         title: "Software Engineer Intern",
         achievements: [
-          "Currently working on data integration projects, including dashboard development and automated database synchronization"
+          "Developed Retool dashboards via dynamic filters and data visualization, writing SQL queries for login analytics",
+          "Automated MySQL database sync with Fivetran pipelines, managing connector configuration and integration",
+          "Built data tables comparing company coverage rates and availability percentages with interactive filtering"
         ]
       }
     },
@@ -24,8 +26,8 @@ export const Work = () => {
       details: {
         title: "Software Engineer Intern",
         achievements: [
-          "Developed a secure Login API and integrated business logic into the web application's frontend",
-          "Designed a MySQL data model and wrote queries, enabling efficient handling of data entries in the backend, improving the model performance by 26%",
+          "Developed a secure login API and integrated business logic into the web application's frontend",
+          "Designed a MySQL data model and queries to handle backend data entries, improving performance by 26%",
           "Created CI/CD pipelines using GitLab to automate linting, testing, and deployment"
         ]
       }
