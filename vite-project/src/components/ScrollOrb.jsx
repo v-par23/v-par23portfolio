@@ -8,8 +8,8 @@ export const ScrollOrb = () => {
         let timeoutId;
 
         const updateOrbPosition = () => {
-            // Calculate X position (right side of screen)
-            const orbX = window.innerWidth * 0.93;
+            // Calculate X position (fixed distance from right edge)
+            const orbX = window.innerWidth - 60; // 60px from right edge
             
             // Get current scroll position
             const scrollY = window.scrollY;

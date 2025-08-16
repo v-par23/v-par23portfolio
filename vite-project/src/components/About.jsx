@@ -3,7 +3,7 @@ import React from 'react';
 export const About = () => {
   return (
     <section id="about" className="relative min-h-screen flex items-center justify-center px-4 py-16">
-      <div className="container max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 shimmer-text">
@@ -14,7 +14,7 @@ export const About = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           
           {/* Left Panel - About Me Section */}
           <div className="lg:col-span-2">
@@ -39,7 +39,7 @@ export const About = () => {
                 </div>
                 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
                   <a 
                     href="#work" 
                     className="cosmic-button flex-1 text-center"
@@ -72,7 +72,7 @@ export const About = () => {
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_30px_rgba(120,219,255,0.3)]">
                     <img 
                       src="/profile.jpeg" 
-                      alt="Vedant Parikh" 
+                      alt="Vedant Parikh - Software Engineer" 
                       className="w-full h-full object-cover"
                     />
                   </div>
