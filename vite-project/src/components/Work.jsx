@@ -58,7 +58,7 @@ export const Work = () => {
 
   return (
     <section id="work" className="relative min-h-screen flex items-center justify-center px-4 py-16">
-      <div className="container max-w-6xl mx-auto">
+      <div className="w-full max-w-6xl mx-auto">
         
 
         {!selectedWork ? (

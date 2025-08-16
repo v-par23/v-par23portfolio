@@ -62,7 +62,7 @@ export const Contact = () => {
         </div>
         
         {/* Additional Contact Info */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-4">
           <div className="cosmic-card bg-card/60 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Let's Work Together!

@@ -31,7 +31,7 @@ export const Navbar = () => {
                 isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
             )}
         >
-            <div className = "container flex items-center justify-between">
+            <div className = "w-full max-w-7xl mx-auto px-8 flex items-center justify-between">
             <a className = "text-xl font-bold text-primary flex items-center" href = "#hero">
                 <span className = "relative z-10">  
                     <span className = "text-glow text-foreground"> v-par23 </span> Portfolio

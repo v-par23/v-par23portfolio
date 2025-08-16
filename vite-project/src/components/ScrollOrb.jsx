@@ -8,25 +8,29 @@ export const ScrollOrb = () => {
         let timeoutId;
 
         const updateOrbPosition = () => {
+            // Calculate X position (right side of screen)
+            const orbX = window.innerWidth * 0.93;
+            
             // Get current scroll position
             const scrollY = window.scrollY;
             
             // Get total scrollable height (document height minus viewport height)
             const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             
-            // Calculate orb position as percentage of scroll progress
-            // This ensures orb only reaches bottom when at the very end
+            // Calculate scroll progress (0 = top, 1 = bottom)
             const scrollProgress = Math.min(scrollY / totalScrollHeight, 1);
             
-            // Calculate orb Y position: start at top (0) and move to bottom (100vh - orb height)
+            // Calculate orb Y position: map scroll progress to viewport height
+            // Start at top (20px) and end at bottom (viewportHeight - 60px)
             const viewportHeight = window.innerHeight;
             const orbHeight = 60; // Approximate orb height
-            const maxOrbY = viewportHeight - orbHeight;
+            const startY = 20; // Start 20px from top
+            const endY = viewportHeight - orbHeight - 20; // End 20px from bottom
             
             // Map scroll progress to orb position
-            const orbY = scrollProgress * maxOrbY;
+            const orbY = startY + (scrollProgress * (endY - startY));
             
-            setOrbPosition(orbY);
+            setOrbPosition({ x: orbX, y: orbY });
         };
 
         const handleScroll = () => {
@@ -64,10 +68,11 @@ export const ScrollOrb = () => {
                 className="scroll-orb"
                 style={{
                     position: 'fixed',
-                    right: '2%',
-                    top: `${orbPosition}px`,
+                    left: `${orbPosition.x}px`,
+                    top: `${orbPosition.y}px`,
                     opacity: isVisible ? 1 : 0,
-                    transition: 'opacity 0.3s ease, top 0.1s ease',
+                    transform: 'translate(-50%, -50%)',
+                    transition: 'opacity 0.3s ease',
                     pointerEvents: 'none',
                     zIndex: 1000
                 }}
