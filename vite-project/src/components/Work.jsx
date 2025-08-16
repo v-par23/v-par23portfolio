@@ -7,14 +7,12 @@ export const Work = () => {
     {
       id: 1,
       company: "ESGTree",
-      period: "July-August 2025",
+      period: "July-Present",
       overview: "Software Engineer Intern",
       details: {
         title: "Software Engineer Intern",
         achievements: [
-          "Engineered Large Language Models (LLMs), including BERT and Attention Models, to analyze software engineering requirements and generate accurate dependency lists, improving project planning efficiency by 37%",
-          "Analyzed 1200+ software requirements monthly using scikit-learn (classification models), spaCy, and NLTK in Python, saving the company $20,000 annually by decreasing project lead times",
-          "Integrated TF-IDF vectorization to detect similarities in software requirements, focusing on preprocessing, model training, hyperparameter tuning and clustering to optimize NLP analysis processes"
+          "Currently working on data integration projects, including dashboard development and automated database synchronization"
         ]
       }
     },
